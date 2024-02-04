@@ -7,7 +7,7 @@ class Televisio:Electrodomestics{
         this.mida=mida
     }
     override fun toString(): String {
-        return "$nom:\n   Preu Base:$preuBase\n   Color:$color\n   Pes:$pes\n   Preu Final:$preu\n  Mida:$mida"
+        return "$nom:\n   Preu Base:$preuBase\n   Color:$color\n   Pes:$pes\n   Preu Final:$preu\n   Mida:$mida"
     }
     override fun preuFinal():Double{
         var result:Double=this.preuBase

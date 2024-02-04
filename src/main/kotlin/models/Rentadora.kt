@@ -7,7 +7,7 @@ class Rentadora:Electrodomestics {
                     this.carrega=carrega
                 }
     override fun toString(): String {
-        return "$nom:\n   Preu Base:$preuBase\n   Color:$color\n   Pes:$pes\n   Preu Final:$preu\n  Carrega:$carrega"
+        return "$nom:\n   Preu Base:$preuBase\n   Color:$color\n   Pes:$pes\n   Preu Final:$preu\n   Carrega:$carrega"
     }
     override fun preuFinal():Double{
         var result:Double=this.preuBase

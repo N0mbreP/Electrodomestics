@@ -7,11 +7,14 @@ open class Electrodomestics {
     protected  var consum:Char='G'
     protected  var pes:Double=5.0
     protected  var preuBase:Double= 0.0
-    protected  var preu:Double=preuFinal()
+    protected  var preu:Double=0.0
     protected  var color:String="blanc"
 
     override fun toString(): String {
         return "$nom:\n   Preu Base:$preuBase\n   Color:$color\n   Pes:$pes\n   Preu Final:$preu"
+    }
+    private fun preuFinalE():Double{
+        return preuFinal()
     }
     protected open fun preuFinal():Double{
         var result:Double=this.preuBase
@@ -40,6 +43,7 @@ open class Electrodomestics {
         this.pes=pes
         this.preuBase=preuBase
         this.color=color
+        this.preu=preuFinalE()
     }
 
 
