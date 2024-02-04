@@ -35,4 +35,13 @@ class Rentadora:Electrodomestics {
         }
         return result
     }
+
+    fun getCarrega():Int{
+        return this.carrega
+    }
+
+    fun settCarrega(carrega: Int){
+        this.carrega=carrega
+    }
+
 }

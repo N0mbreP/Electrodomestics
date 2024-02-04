@@ -34,4 +34,12 @@ class Televisio:Electrodomestics{
         }
         return result
     }
+
+    fun getMida():Double{
+        return this.mida
+    }
+    fun settMida(mida:Double){
+        this.mida=mida
+    }
+
 }
