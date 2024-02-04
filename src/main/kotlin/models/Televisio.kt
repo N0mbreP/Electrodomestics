@@ -1,13 +1,13 @@
 package models
 
-class Rentadora:Electrodomestics {
-    private var carrega:Int=5
+class Televisio:Electrodomestics{
+    private var mida:Double=28.0
     constructor(nom: String, consum: Char, pes: Double, preuBase: Double, color: String,
-                carrega:Int):super(nom, consum, pes, preuBase, color){
-                    this.carrega=carrega
-                }
+                mida:Double):super(nom, consum, pes, preuBase, color){
+        this.mida=mida
+    }
     override fun toString(): String {
-        return "$nom:\n   Preu Base:$preuBase\n   Color:$color\n   Pes:$pes\n   Preu Final:$preu\n  Carrega:$carrega"
+        return "$nom:\n   Preu Base:$preuBase\n   Color:$color\n   Pes:$pes\n   Preu Final:$preu\n  Mida:$mida"
     }
     override fun preuFinal():Double{
         var result:Double=this.preuBase
@@ -26,12 +26,11 @@ class Rentadora:Electrodomestics {
             'F'->result+=10.0
             'G'->result+=0.0
         }
-        when(this.carrega){
-            6->result+=55
-            7->result+=55
-            8->result+=70
-            9->result+=85
-            10->result+=100
+        when{
+            this.mida in 29.0..32.0->result+=50
+            this.mida <43.0->result+=100
+            this.mida <51.0->result+=150
+            this.mida>=51.0->result+=200
         }
         return result
     }

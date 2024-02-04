@@ -11,7 +11,7 @@ open class Electrodomestics {
     protected  var color:String="blanc"
 
     override fun toString(): String {
-        return super.toString()
+        return "$nom:\n   Preu Base:$preuBase\n   Color:$color\n   Pes:$pes\n   Preu Final:$preu"
     }
     protected open fun preuFinal():Double{
         var result:Double=this.preuBase
