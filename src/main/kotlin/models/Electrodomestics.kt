@@ -4,16 +4,16 @@ import java.awt.Color
 
 open class Electrodomestics {
     protected var nom:String="Owu"
-    private var consum:Char='G'
-    private var pes:Double=5.0
-    private var preuBase:Double= 0.0
-    private var preu:Double=preuFinal()
-    private var color:String="blanc"
+    protected  var consum:Char='G'
+    protected  var pes:Double=5.0
+    protected  var preuBase:Double= 0.0
+    protected  var preu:Double=preuFinal()
+    protected  var color:String="blanc"
 
     override fun toString(): String {
         return super.toString()
     }
-    private fun preuFinal():Double{
+    protected open fun preuFinal():Double{
         var result:Double=this.preuBase
         when{
             this.pes in 6.0..20.0->result+=20.0
@@ -47,35 +47,35 @@ open class Electrodomestics {
         return this.nom
     }
 
-    fun gettConsum():Char{
+    protected open fun gettConsum():Char{
         return this.consum
     }
-    fun gettPes():Double{
+    protected open fun gettPes():Double{
         return this.pes
     }
-    fun gettPreuBase():Double{
+    protected open fun gettPreuBase():Double{
         return this.preuBase
     }
-    fun gettPreu():Double{
+    protected open fun gettPreu():Double{
         return this.preu
     }
-    fun gettColor():String{
+    protected open fun gettColor():String{
         return this.color
     }
 
-    fun settNom(nom:String){
+    protected open fun settNom(nom:String){
         this.nom=nom
     }
-    fun settPreuBase(preuBase:Double){
+    protected open fun settPreuBase(preuBase:Double){
         this.preuBase=preuBase
     }
-    fun settColor(color: String){
+    protected open fun settColor(color: String){
         this.color=color
     }
-    fun settConsum(consum:Char){
+    protected open fun settConsum(consum:Char){
         this.consum=consum
     }
-    fun settPes(pes:Double){
+    protected open fun settPes(pes:Double){
         this.pes=pes
     }
 
